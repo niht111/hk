@@ -1,15 +1,24 @@
-html, 
+/* Общие стили */
+html,
 body {
     margin: 0;
     height: 100%;
     padding: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     background-color: #1c1f24;
 }
 
+.game {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Верхняя часть с очками */
 .header {
     display: flex;
     align-items: center;
@@ -30,8 +39,10 @@ body {
     user-select: none;
 }
 
+/* Круг с изображением */
 .circle {
     position: relative;
+    margin: 20px 0;
 }
 
 .circle img {
@@ -71,22 +82,35 @@ body {
     }
 }
 
-.buttons {
-    margin-top: 20px;
+
+/* Нижнее меню */
+.bottom-nav {
     display: flex;
-    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2a2d33;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #ef882b;
+.bottom-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
     border: none;
-    color: white;
+    color: #fff;
+    font-size: 12px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 8px;
 }
 
-button:hover {
-    background-color: #e8c547;
+.bottom-nav button img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav button:hover {
+    color: #e8c547;
 }
