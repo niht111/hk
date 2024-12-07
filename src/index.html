@@ -12,6 +12,17 @@
         <div class="square"></div> <!-- Обычный квадрат -->
     </div>
     <div class="game">
+        <div class="counter-container">
+            <div class="counter-box">
+                <div>Кнопка 1</div>
+            </div>
+            <div class="counter-box">
+                <div>Кнопка 2</div>
+            </div>
+            <div class="counter-box">
+                <div>Кнопка 3</div>
+            </div>
+        </div>
         <div class="header">
             <img src="./assets/ham_coin.png" alt="coin">
             <h2 class="score" id="score">0</h2>
@@ -27,7 +38,6 @@
                 <img src="./assets/energy.png" alt="Energy Icon" class="energy-icon">
                 <p id="energy-level">1500/1500</p>
             </div>
-            <!-- Отдельно размещаем иконку и кнопку Boost -->
             <div class="boost">
                 <img src="./assets/boost.png" alt="Boost Icon" class="boost-icon">
                 <button id="boost-btn">Boost</button>
@@ -35,27 +45,27 @@
         </div>
     </div>
     <div class="bottom-nav">
-        <button id="nav1">
+        <button data-page="index.html">
             <img src="./assets/exchange.png" alt="Icon 1">
             <p>Exchange</p>
         </button>
-        <button id="nav2">
+        <button data-page="mine.html">
             <img src="./assets/mine.png" alt="Icon 2">
             <p>Mine</p>
         </button>
-        <button id="nav3">
+        <button data-page="friends.html">
             <img src="./assets/friends.png" alt="Icon 3">
             <p>Friends</p>
         </button>
-        <button id="nav4">
+        <button data-page="earn.html">
             <img src="./assets/earn.png" alt="Icon 4">
             <p>Earn</p>
         </button>
-        <button id="nav5">
+        <button data-page="airdrop.html">
             <img src="./assets/ham_coin.png" alt="Icon 5">
             <p>Airdrop</p>
         </button>
-    </div>       
+    </div>
     <script src="app.js" defer></script>
 </body>
 </html>
