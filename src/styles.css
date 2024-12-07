@@ -81,7 +81,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40%;
+    margin-top: 45%;
 }
 /* Отображает монетку - изображение возле очков*/
 .header img {
