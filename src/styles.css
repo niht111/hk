@@ -18,7 +18,7 @@ body {
     top: 10%; /* Размещаем кнопки в верхней части */
     width: 100%;
     z-index: 1;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 /* Кнопки */
@@ -81,7 +81,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20%;
+    margin-top: 25%;
 }
 /* Отображает монетку - изображение возле очков*/
 .header img {
