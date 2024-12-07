@@ -1,240 +1,71 @@
-/* Характеристики страницы */
-html,
-body {
-    margin: 0;
-    height: 100%;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-/* Контейнер для квадратов */
-.counter-container {
-    display: flex;
-    justify-content: space-evenly; /* Размещаем квадраты с равными промежутками */
-    align-items: center;
-    position: absolute;
-    top: 10%; /* Размещаем кнопки в верхней части */
-    width: 100%;
-    z-index: 1;
-    margin-top: 10%;
-}
-
-/* Кнопки */
-.counter-box {
-    width: 60px; /* Ширина квадрата */
-    height: 60px; /* Высота квадрата */
-    background-color: #3e4a59; /* Цвет фона */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Контейнер для фона */
-.background-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2; 
-}
-
-.square2 {
-    position: absolute;
-    width: 100%;
-    height: 30%; 
-    top: 0;
-    left: 0;
-    background: linear-gradient(180deg, #212429 38.34%, #F9D838 100%);
-    z-index: -2;
-}
-
-.square {
-    position: absolute;
-    width: 100%;
-    height: 100%;  
-    top: 15%;
-    left: 0;
-    border: 5px solid #F9D838;
-    background: #2C2F35;
-    border-radius: 15% 15% 0 0; 
-    z-index: -1; 
-    margin: -5px;
-}
-/* Контейнер основной игры - кликера*/
-.game {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-/* Отображает очки - количество кликов, фото*/
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20%;
-}
-/* Отображает монетку - изображение возле очков*/
-.header img {
-    width: 50px;
-    height: 50px;
-    margin-right: 14px;
-}
-/* Само количество очков - кликов*/
-.score {
-    color: #fff;
-    text-align: center;
-    font-size: 36px;
-    font-weight: 800;
-    user-select: none;
-}
-/* Контейнер шкалы*/
-.progress-bar {
-    width: 80%;
-    height: 10px;
-    background: #2a2d33;
-    border-radius: 10px;
-    margin: 10px 0;
-    overflow: hidden;
-    position: relative;
-}
-/* Заполняемая часть шкалы*/
-#progress-bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #e8c547, #ef882b);
-    width: 0%;  
-    transition: width 0.3s ease;  
-    border-radius: 10px;
-}
-/* Основной кликер - контейнер*/
-.circle {
-    position: relative;
-    margin: 20px 0;
-}
-/* Фото кликера*/
-.circle img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
-    transition: transform 0.2s ease;
-    --tiltX: 0deg;
-    --tiltY: 0deg;
-    transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
-}
-/* +1 анимация*/
-.plus-one {
-    position: absolute;
-    font-family: Inter;
-    text-shadow: 0px 0px 4px rgba(234, 182, 64, 0.25);
-    font-size: 24px;
-    font-weight: 800;
-    background: linear-gradient(180deg, #e8c547 0%, #ef882b 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    pointer-events: none;
-    user-select: none;
-    animation: move-up 2s forwards;
-}
-/* Его анимация*/
-@keyframes move-up {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-}
-
-.charge-container {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-top: 20px;
-    align-items: center;
-}
-
-.charge {
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-
-.charge .energy-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-#energy-level {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.boost {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.boost-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-#boost-btn {
-    background-color: #1c1f24;
-    color: #fff;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 5px;
-    /* cursor: pointer; */
-    /* transition: background-color 0.3s; */
-}
-
-/* Нижняя панель управления */
-.bottom-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #2a2d33;
-    padding: 10px 0;
-    width: 100%;
-    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.bottom-nav button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.bottom-nav button img {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 4px;
-}
-
-.bottom-nav button:hover {
-    color: #e8c547;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamster Kombat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="square2"></div> <!-- Квадрат с градиентом -->
+        <div class="square"></div> <!-- Обычный квадрат -->
+    </div>
+    <div class="game">
+        <div class="counter-container">
+            <div class="counter-box">
+                <div>Кнопка 1</div>
+            </div>
+            <div class="counter-box">
+                <div>Кнопка 2</div>
+            </div>
+            <div class="counter-box">
+                <div>Кнопка 3</div>
+            </div>
+        </div>
+        <div class="header">
+            <img src="./assets/ham_coin.png" alt="coin">
+            <h2 class="score" id="score">0</h2>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-bar-fill"></div>
+        </div>
+        <div class="circle">
+            <img id="circle" src="./assets/ham1.png" alt="hamster">
+        </div>
+        <div class="charge-container">
+            <div class="charge">
+                <img src="./assets/energy.png" alt="Energy Icon" class="energy-icon">
+                <p id="energy-level">1500/1500</p>
+            </div>
+            <div class="boost">
+                <img src="./assets/boost.png" alt="Boost Icon" class="boost-icon">
+                <button id="boost-btn">Boost</button>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <button data-page="index.html">
+            <img src="./assets/exchange.png" alt="Icon 1">
+            <p>Exchange</p>
+        </button>
+        <button data-page="mine.html">
+            <img src="./assets/mine.png" alt="Icon 2">
+            <p>Mine</p>
+        </button>
+        <button data-page="friends.html">
+            <img src="./assets/friends.png" alt="Icon 3">
+            <p>Friends</p>
+        </button>
+        <button data-page="earn.html">
+            <img src="./assets/earn.png" alt="Icon 4">
+            <p>Earn</p>
+        </button>
+        <button data-page="airdrop.html">
+            <img src="./assets/ham_coin.png" alt="Icon 5">
+            <p>Airdrop</p>
+        </button>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+</html>
