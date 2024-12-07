@@ -123,12 +123,25 @@ $circle.addEventListener('click', (event) => {
     }, 2000);
 });
 
-// Добавляем обработку кнопок
-$buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        alert(`Вы нажали на кнопку ${index + 1}`);
-        // Здесь можно реализовать переходы на другие страницы
-        // Например: window.location.href = "page1.html";
+// Добавляем активный класс для текущей страницы
+
+const pages = ['index.html', 'mine.html', 'friends.html', 'earn.html', 'airdrop.html'];
+
+// Установка активного класса и обработчиков событий
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname.split('/').pop(); // Получаем имя текущей страницы
+    const navButtons = document.querySelectorAll('.bottom-nav button');
+
+    navButtons.forEach((button, index) => {
+        // Устанавливаем активный класс
+        if (currentPath === pages[index]) {
+            button.classList.add('active');
+        }
+
+        // Добавляем обработчик клика для перехода
+        button.addEventListener('click', () => {
+            window.location.href = pages[index];
+        });
     });
 });
 
