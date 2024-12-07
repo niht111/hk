@@ -178,3 +178,9 @@ body {
 .bottom-nav button:hover {
     color: #e8c547;
 }
+
+.bottom-nav button.active {
+    background-color: #e0e0e0;
+    border: 2px solid #ffaa00;
+    color: #ffaa00;
+}
