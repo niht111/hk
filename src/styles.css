@@ -7,7 +7,40 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #1c1f24;
+    
+}
+/* Контейнер для фона */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Квадраты будут ниже контента */
+}
+
+/* Квадрат с градиентом (верхний квадрат), растянут по всему экрану */
+.square2 {
+    position: absolute;
+    width: 100%;
+    height: 40%;  /* Квадрат с градиентом будет занимать верхнюю половину экрана */
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #212429 38.34%, #F9D838 100%);
+    z-index: -2;
+}
+
+/* Обычный квадрат, растянут по всему экрану, но перекрывает верхний */
+.square {
+    position: absolute;
+    width: 100%;
+    height: 100%;  /* Нижняя половина экрана */
+    top: 25%;
+    left: 0;
+    border: 5px solid #F9D838;
+    background: #2C2F35;
+    border-radius: 15% 15% 0 0; /*Закругленные углы сверху */
+    z-index: -1; /* Немного выше первого квадрата */
 }
 /* Контейнер основной игры - кликера*/
 .game {
@@ -177,10 +210,4 @@ body {
 
 .bottom-nav button:hover {
     color: #e8c547;
-}
-
-.bottom-nav button.active {
-    background-color: #e0e0e0;
-    border: 2px solid #ffaa00;
-    color: #ffaa00;
 }
