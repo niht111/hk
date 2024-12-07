@@ -1,4 +1,4 @@
-/* Общие стили */
+/* Характеристики страницы */
 html,
 body {
     margin: 0;
@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     background-color: #1c1f24;
 }
-
+/* Контейнер основной игры - кликера*/
 .game {
     flex: 1;
     display: flex;
@@ -17,20 +17,19 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-/* Верхняя часть с очками */
+/* Отображает очки - количество кликов, фото*/
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+/* Отображает монетку - изображение возле очков*/
 .header img {
     width: 50px;
     height: 50px;
     margin-right: 14px;
 }
-
+/* Само количество очков - кликов*/
 .score {
     color: #fff;
     text-align: center;
@@ -38,13 +37,30 @@ body {
     font-weight: 800;
     user-select: none;
 }
-
-/* Круг с изображением */
+/* Контейнер шкалы*/
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background: #2a2d33;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+/* Заполняемая часть шкалы*/
+#progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8c547, #ef882b);
+    width: 0%;  
+    transition: width 0.3s ease;  
+    border-radius: 10px;
+}
+/* Основной кликер - контейнер*/
 .circle {
     position: relative;
     margin: 20px 0;
 }
-
+/* Фото кликера*/
 .circle img {
     width: 200px;
     height: 200px;
@@ -55,7 +71,7 @@ body {
     --tiltY: 0deg;
     transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
 }
-
+/* +1 анимация*/
 .plus-one {
     position: absolute;
     font-family: Inter;
@@ -70,7 +86,7 @@ body {
     user-select: none;
     animation: move-up 2s forwards;
 }
-
+/* Его анимация*/
 @keyframes move-up {
     0% {
         opacity: 1;
@@ -82,8 +98,56 @@ body {
     }
 }
 
+.charge-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    align-items: center;
+}
 
-/* Нижнее меню */
+.charge {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.charge .energy-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#energy-level {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.boost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boost-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#boost-btn {
+    background-color: #1c1f24;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    /* transition: background-color 0.3s; */
+}
+
+/* Нижняя панель управления */
 .bottom-nav {
     display: flex;
     justify-content: space-around;
