@@ -1,52 +1,91 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="airdrop.css">
-    <title>Airdrop Page</title>
+    <title>Earn</title>
+    <link rel="stylesheet" href="earn.css">
 </head>
 <body>
-    <div class="header">
-        <button class="back-button">Назад</button>
-        <h1>Hamster Kombat</h1>
-        <span class="bot-tag">бот</span>
-    </div>
+    <div class="container">
+        <header>
+            <div class="back-btn">Назад</div>
+            <div class="title">Hamster Kombat</div>
+            <div class="bot-label">бот</div>
+        </header>
 
-    <div class="content">
-        <div class="icon-wrapper">
-            <img src="./assets/ham_coin.png" alt="Hamster Coin">
+        <main>
+            <div class="coin-banner">
+                <div class="coin-icon"></div>
+                <h1>Earn more coins</h1>
+            </div>
+
+            <section class="tasks">
+                <h2>Daily tasks</h2>
+                <div class="task">
+                    <div class="task-icon calendar"></div>
+                    <div class="task-info">
+                        <p>Daily reward</p>
+                        <span>+6 649 000</span>
+                    </div>
+                </div>
+
+                <h2>Tasks list</h2>
+                <div class="task">
+                    <div class="task-icon tg"></div>
+                    <div class="task-info">
+                        <p>Join our TG channel</p>
+                        <span>+1 000</span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-icon tg"></div>
+                    <div class="task-info">
+                        <p>Join our TG group</p>
+                        <span>+1 000</span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-icon medium"></div>
+                    <div class="task-info">
+                        <p>Join our Medium</p>
+                        <span>+3 000</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-menu">
+                <div>Exchange</div>
+                <div>Mine</div>
+                <div>Friends</div>
+                <div>Earn</div>
+                <div>Airdrop</div>
+            </div>
+        </footer>
+        <div class="bottom-nav">
+            <button data-page="index.html">
+                <img src="./assets/exchange.png" alt="Icon 1">
+                <p>Exchange</p>
+            </button>
+            <button data-page="mine.html">
+                <img src="./assets/mine.png" alt="Icon 2">
+                <p>Mine</p>
+            </button>
+            <button data-page="friends.html">
+                <img src="./assets/friends.png" alt="Icon 3">
+                <p>Friends</p>
+            </button>
+            <button data-page="earn.html">
+                <img src="./assets/earn.png" alt="Icon 4">
+                <p>Earn</p>
+            </button>
+            <button data-page="airdrop.html">
+                <img src="./assets/ham_coin.png" alt="Icon 5">
+                <p>Airdrop</p>
+            </button>
         </div>
-        <h2>Приготовьтесь, Airdrop уже скоро!</h2>
-        <ul class="tasks">
-            <li class="completed">Переговоры с биржами</li>
-            <li class="completed">Переговоры с маркет-мейкерами</li>
-            <li class="completed">Ключевые партнерства на подходе</li>
-            <li class="pending">Список задач Airdrop</li>
-        </ul>
-    </div>
-
-    <div class="bottom-nav">
-        <button data-page="index.html">
-            <img src="./assets/exchange.png" alt="Exchange Icon">
-            <p>Exchange</p>
-        </button>
-        <button data-page="mine.html">
-            <img src="./assets/mine.png" alt="Mine Icon">
-            <p>Mine</p>
-        </button>
-        <button data-page="friends.html">
-            <img src="./assets/friends.png" alt="Friends Icon">
-            <p>Friends</p>
-        </button>
-        <button data-page="earn.html">
-            <img src="./assets/earn.png" alt="Earn Icon">
-            <p>Earn</p>
-        </button>
-        <button data-page="airdrop.html">
-            <img src="./assets/ham_coin.png" alt="Airdrop Icon">
-            <p>Airdrop</p>
-        </button>
     </div>
     <script src="mine.js" defer></script>
 </body>
