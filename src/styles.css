@@ -258,7 +258,7 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: #32363CB2;
-    padding: 20px 20px; /* Отступы сверху и снизу 10px, слева и справа 20px */
+    padding: 0px 10px; /* Отступы сверху и снизу 10px, слева и справа 20px */
     border-radius: 12px;
     width: auto; /* Автоматическая ширина */
     max-width: 960px; /* Максимальная ширина панели */
