@@ -7,14 +7,76 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-container">
+        <div class="square2"></div> <!-- Квадрат с градиентом -->
+        <div class="square"></div> <!-- Обычный квадрат -->
+    </div>
     <div class="game">
+        <div class="counter-container">
+            <div class="counter-box earn">
+                <div class="counter-text1">Earn per tap</div>
+                <div class="counter-info">
+                    <img src="./assets/coin1.png" alt="Coin Icon" class="counter-icon">
+                    <div class="counter-value">+12</div>
+                </div>
+            </div>
+            <div class="counter-box coins">
+                <div class="counter-text2">Coins to level up</div>
+                <div class="counter-info">
+                    <div class="counter-value1">10M</div>
+                </div>
+            </div>
+            <div class="counter-box profit">
+                <div class="counter-text3">Profit per hour</div>
+                <div class="counter-info">
+                    <img src="./assets/coin1.png" alt="Coin Icon" class="counter-icon">
+                    <div class="counter-value">+5k</div>
+                </div>
+            </div>
+        </div>
+                
         <div class="header">
-            <img src="./assets/ham_coin.png" alt="coin">
-            <h2 class="score" id="score" >42</h2>
+            <img src="./assets/coin1.png" alt="coin">
+            <h2 class="score" id="score">0</h2>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-bar-fill"></div>
         </div>
         <div class="circle">
-            <img id="circle" src="./assets/hamicon.png" alt="hamster">
+            <img id="circle" src="./assets/ham1.png" alt="hamster">
         </div>
+        <div class="charge-container">
+            <div class="charge">
+                <img src="./assets/energy.png" alt="Energy Icon" class="energy-icon">
+                <p id="energy-level">1500/1500</p>
+            </div>
+            <div class="boost">
+                <img src="./assets/boost.png" alt="Boost Icon" class="boost-icon">
+                <button id="boost-btn">Boost</button>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <button data-page="index.html">
+            <img src="./assets/exchange.png" alt="Icon 1">
+            <p>Exchange</p>
+        </button>
+        <button data-page="mine.html">
+            <img src="./assets/mine.png" alt="Icon 2">
+            <p>Mine</p>
+        </button>
+        <button data-page="friends.html">
+            <img src="./assets/friends.png" alt="Icon 3">
+            <p>Friends</p>
+        </button>
+        <button data-page="earn.html">
+            <img src="./assets/earn.png" alt="Icon 4">
+            <p>Earn</p>
+        </button>
+        <button data-page="airdrop.html">
+            <img src="./assets/ham_coin.png" alt="Icon 5">
+            <p>Airdrop</p>
+        </button>
     </div>
     <script src="app.js" defer></script>
 </body>

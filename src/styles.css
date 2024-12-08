@@ -1,28 +1,137 @@
-html, 
+/* Характеристики страницы */
+html,
 body {
     margin: 0;
     height: 100%;
     padding: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.counter-container {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: #1c1f24;
+    position: absolute;
+    top: 15%; /* Опускаем кнопки вниз */
+    width: 100%;
+    z-index: 1;
+    margin-top: 5%; /* Дополнительный отступ сверху */
+}
+.counter-text1 {
+    color: #F79841; 
 }
 
+.counter-text2 {
+    color: #6F72E2; 
+}
+
+.counter-text3 {
+    color: #84CB69; 
+}
+.counter-box {
+    width: 100px; /* Ширина квадрата */
+    height: 50px; /* Высота адаптивная */
+    background-color: #3e4a59; /* Цвет фона */
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    gap: 8px; /* Расстояние между элементами */
+}
+
+.counter-value1 {
+    margin-top: 6px;
+}
+
+.counter-text {
+    font-size: 10px; /* Размер текста кнопки */
+    margin-bottom: 5px; /* Поднимаем текст кнопки чуть выше */
+}
+
+.counter-info {
+    display: flex;
+    flex-direction: row; /* Элементы вертикально */
+    justify-content: center;
+    align-items: center;
+     /* Отступ сверху под текстом кнопки */
+}
+
+.counter-icon {
+    width: 20px; /* Размер иконки */
+    height: 20px;
+    margin-bottom: 4px; /* Отступ между иконкой и числом */
+}
+
+.counter-value {
+    font-size: 12px; /* Размер текста числа */
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+/* Контейнер для фона */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; 
+}
+
+.square2 {
+    position: absolute;
+    width: 100%;
+    height: 25%; 
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #212429 38.34%, #F9D838 100%);
+    z-index: -2;
+}
+
+.square {
+    position: absolute;
+    width: 100%;
+    height: 100%;  
+    top: 15%;
+    left: 0;
+    border: 2px solid #F9D838;
+    background: #2C2F35;
+    border-radius: 50px 50px 0 0; 
+    z-index: -1; 
+    margin: -2px;
+}
+/* Контейнер основной игры - кликера*/
+.game {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Отображает очки - количество кликов, фото*/
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-top: 45%;
 }
-
+/* Отображает монетку - изображение возле очков*/
 .header img {
     width: 50px;
     height: 50px;
     margin-right: 14px;
 }
-
+/* Само количество очков - кликов*/
 .score {
     color: #fff;
     text-align: center;
@@ -30,11 +139,30 @@ body {
     font-weight: 800;
     user-select: none;
 }
-
-.circle {
+/* Контейнер шкалы*/
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background: #2a2d33;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
     position: relative;
 }
-
+/* Заполняемая часть шкалы*/
+#progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8c547, #ef882b);
+    width: 0%;  
+    transition: width 0.3s ease;  
+    border-radius: 10px;
+}
+/* Основной кликер - контейнер*/
+.circle {
+    position: relative;
+    margin: 20px 0;
+}
+/* Фото кликера*/
 .circle img {
     width: 200px;
     height: 200px;
@@ -45,7 +173,7 @@ body {
     --tiltY: 0deg;
     transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
 }
-
+/* +1 анимация*/
 .plus-one {
     position: absolute;
     font-family: Inter;
@@ -60,7 +188,7 @@ body {
     user-select: none;
     animation: move-up 2s forwards;
 }
-
+/* Его анимация*/
 @keyframes move-up {
     0% {
         opacity: 1;
@@ -70,4 +198,85 @@ body {
         opacity: 0;
         transform: translateY(-50px);
     }
+}
+
+.charge-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.charge {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.charge .energy-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#energy-level {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.boost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boost-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#boost-btn {
+    background-color: #1c1f24;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    /* transition: background-color 0.3s; */
+}
+
+/* Нижняя панель управления */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2a2d33;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.bottom-nav button img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav button:hover {
+    color: #e8c547;
 }
