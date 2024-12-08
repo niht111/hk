@@ -182,6 +182,7 @@ body {
     --tiltX: 0deg;
     --tiltY: 0deg;
     transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
+    pointer-events: none;
 }
 /* +1 анимация*/
 .plus-one {
@@ -264,15 +265,19 @@ body {
 /* Нижняя панель управления */
 .bottom-nav {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     justify-content: space-around;
     align-items: center;
     background-color: #32363CB2;
-    padding: 20px 20px; /* Отступы сверху и снизу 10px, слева и справа 20px */
+    padding: 10px 0px; /* Отступы сверху и снизу 10px, слева и справа 20px */
     border-radius: 12px;
-    width: auto; /* Автоматическая ширина */
+    width: 100%; /* Автоматическая ширина */
     max-width: 960px; /* Максимальная ширина панели */
     margin: 0 auto; /* Центрирует панель на экране */
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .bottom-nav button {
