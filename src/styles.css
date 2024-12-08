@@ -253,15 +253,16 @@ body {
     /* transition: background-color 0.3s; */
 }
 
-/* Нижняя панель управления */
 .bottom-nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #2C2F35;
-    padding: 10px 0;
-    width: 100%;
+    background-color: #32363CB2;
+    padding: 10px 20px; /* Отступы сверху и снизу 10px, слева и справа 20px */
     border-radius: 12px;
+    width: auto; /* Автоматическая ширина */
+    max-width: 960px; /* Максимальная ширина панели */
+    margin: 0 auto; /* Центрирует панель на экране */
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -277,7 +278,7 @@ body {
 }
 
 .bottom-nav button img {
-    width: 30px;
+    width: 20px;
     height: 20px;
     margin-bottom: 4px;
 }
@@ -285,4 +286,3 @@ body {
 .bottom-nav button:hover {
     color: #e8c547;
 }
-
