@@ -23,8 +23,8 @@ body {
 
 /* Кнопки */
 .counter-box {
-    width: 60px; /* Ширина квадрата */
-    height: 100px; /* Высота квадрата */
+    width: 100px; /* Ширина квадрата */
+    height: 60px; /* Высота квадрата */
     background-color: #3e4a59; /* Цвет фона */
     display: flex;
     justify-content: center;
