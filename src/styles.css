@@ -182,7 +182,7 @@ body {
     --tiltX: 0deg;
     --tiltY: 0deg;
     transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
-    pointer-events: none;
+    pointer-events: auto;
 }
 /* +1 анимация*/
 .plus-one {
