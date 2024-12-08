@@ -34,6 +34,17 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.earn div {
+    color: #F79841; 
+}
+
+.coins div {
+    color: #6F72E2; 
+}
+
+.profit div {
+    color: #84CB69; 
+}
 .counter-box div {
     margin-bottom: 4px; /* Отступ между текстом и иконкой */
 }
