@@ -20,17 +20,6 @@ body {
     z-index: 1;
     margin-top: 15%;
 }
-.earn div {
-    color: #F79841; 
-}
-
-.coins div {
-    color: #6F72E2; 
-}
-
-.profit div {
-    color: #84CB69; 
-}
 /* Кнопки */
 .counter-box {
     width: 100px; /* Ширина квадрата */
@@ -45,6 +34,28 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.counter-box div {
+    margin-bottom: 4px; /* Отступ между текстом и иконкой */
+}
+.counter-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px; /* Расстояние от основного текста */
+}
+
+.counter-icon {
+    width: 16px; /* Размер иконки */
+    height: 16px;
+    margin-right: 4px; /* Расстояние между иконкой и текстом */
+}
+
+.counter-value {
+    font-size: 12px; /* Размер текста */
+    color: #fff; /* Цвет текста */
+    font-weight: bold; /* Жирность текста */
+}
+
 
 /* Контейнер для фона */
 .background-container {
