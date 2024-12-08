@@ -32,7 +32,7 @@ body {
 }
 .counter-box {
     width: 100px; /* Ширина квадрата */
-    height: auto; /* Высота адаптивная */
+    height: 50px; /* Высота адаптивная */
     background-color: #3e4a59; /* Цвет фона */
     display: flex;
     flex-direction: column; /* Элементы располагаются вертикально */
