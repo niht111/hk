@@ -20,7 +20,17 @@ body {
     z-index: 1;
     margin-top: 20%;
 }
+.earn div {
+    color: #F79841; 
+}
 
+.coins div {
+    color: #6F72E2; 
+}
+
+.profit div {
+    color: #84CB69; 
+}
 /* Кнопки */
 .counter-box {
     width: 100px; /* Ширина квадрата */
