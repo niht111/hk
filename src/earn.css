@@ -1,0 +1,159 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #333;
+}
+
+header .back-btn {
+    color: #999;
+}
+
+header .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header .bot-label {
+    font-size: 14px;
+    color: #999;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.coin-banner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.coin-banner .coin-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 20px gold;
+}
+
+.coin-banner h1 {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.tasks {
+    margin-top: 20px;
+}
+
+.tasks h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background: #1c1c1c;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.task-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.task-icon.calendar {
+    background-color: red;
+}
+
+.task-icon.tg {
+    background-color: blue;
+}
+
+.task-icon.medium {
+    background-color: black;
+}
+
+.task-info p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.task-info span {
+    font-size: 14px;
+    color: #999;
+}
+
+footer {
+    background-color: #1c1c1c;
+    padding: 10px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #666;
+}
+/* Нижняя панель управления */
+.bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #32363CB2;
+    padding: 10px 0px; /* Отступы сверху и снизу 10px, слева и справа 20px */
+    border-radius: 12px;
+    width: 100%; /* Автоматическая ширина */
+    max-width: 960px; /* Максимальная ширина панели */
+    margin: 0 auto; /* Центрирует панель на экране */
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.bottom-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.bottom-nav button img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+    pointer-events: none;
+}
+
+.bottom-nav button:hover {
+    color: #e8c547;
+}
