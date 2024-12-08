@@ -54,7 +54,7 @@ body {
 
 .counter-info {
     display: flex;
-    flex-direction: column; /* Элементы вертикально */
+    flex-direction: row; /* Элементы вертикально */
     justify-content: center;
     align-items: center;
     margin-top: 5px; /* Отступ сверху под текстом кнопки */
