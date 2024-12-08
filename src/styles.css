@@ -14,7 +14,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    top: 15%; /* Опускаем кнопки вниз */
+    top: 16%; /* Опускаем кнопки вниз */
     width: 100%;
     z-index: 1;
     margin-top: 5%; /* Дополнительный отступ сверху */
@@ -29,6 +29,10 @@ body {
 
 .counter-text3 {
     color: #84CB69; 
+}
+
+.counter-value1 {
+    margin-top: 6px;
 }
 .counter-box {
     width: 100px; /* Ширина квадрата */
@@ -61,7 +65,7 @@ body {
     flex-direction: row; /* Элементы вертикально */
     justify-content: center;
     align-items: center;
-     /* Отступ сверху под текстом кнопки */
+    margin-top: 5px; /* Отступ сверху под текстом кнопки */
 }
 
 .counter-icon {
@@ -280,3 +284,4 @@ body {
 .bottom-nav button:hover {
     color: #e8c547;
 }
+
