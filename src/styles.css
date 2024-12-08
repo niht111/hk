@@ -14,7 +14,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    top: 20%; /* Опускаем кнопки вниз */
+    top: 16%; /* Опускаем кнопки вниз */
     width: 100%;
     z-index: 1;
     margin-top: 5%; /* Дополнительный отступ сверху */
