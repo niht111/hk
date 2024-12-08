@@ -30,6 +30,10 @@ body {
 .counter-text3 {
     color: #84CB69; 
 }
+.counter-value1 {
+    margin-top: 6px;
+}
+
 .counter-box {
     width: 100px; /* Ширина квадрата */
     height: 50px; /* Высота адаптивная */
