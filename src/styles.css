@@ -18,7 +18,7 @@ body {
     top: 10%; /* Размещаем кнопки в верхней части */
     width: 100%;
     z-index: 1;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 .earn div {
     color: #F79841; 
