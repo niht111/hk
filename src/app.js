@@ -2,7 +2,7 @@ const $circle = document.querySelector('#circle');
 const $score = document.querySelector('#score');
 const $buttons = document.querySelectorAll('.bottom-nav button');
 
-const maxClicks = 400; // Максимум кликов
+const maxClicks = 4000; // Максимум кликов
 let totalClicks = getScore(); // Счётчик кликов
 
 let maxEnergy = 1500; // Максимальная энергия
