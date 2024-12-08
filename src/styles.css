@@ -9,62 +9,69 @@ body {
     flex-direction: column;
     overflow: hidden;
 }
-/* Контейнер для квадратов */
 .counter-container {
     display: flex;
-    justify-content: space-evenly; /* Размещаем квадраты с равными промежутками */
+    justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    top: 10%; /* Размещаем кнопки в верхней части */
+    top: 8%; /* Опускаем кнопки вниз */
     width: 100%;
     z-index: 1;
-    margin-top: 15%;
+    margin-top: 5%; /* Дополнительный отступ сверху */
 }
-/* Кнопки */
-.counter-box {
-    width: 100px; /* Ширина квадрата */
-    height: 60px; /* Высота квадрата */
-    background-color: #3e4a59; /* Цвет фона */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-}
-.earn div {
+.counter-text1 {
     color: #F79841; 
 }
-.coins div {
+
+.counter-text2 {
     color: #6F72E2; 
 }
 
-.profit div {
+.counter-text3 {
     color: #84CB69; 
 }
-.counter-box div {
-    margin-bottom: 4px; /* Отступ между текстом и иконкой */
+.counter-box {
+    width: 100px; /* Ширина квадрата */
+    height: auto; /* Высота адаптивная */
+    background-color: #3e4a59; /* Цвет фона */
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    gap: 8px; /* Расстояние между элементами */
 }
+
+.counter-text {
+    font-size: 10px; /* Размер текста кнопки */
+    margin-bottom: 5px; /* Поднимаем текст кнопки чуть выше */
+}
+
 .counter-info {
     display: flex;
+    flex-direction: column; /* Элементы вертикально */
     justify-content: center;
     align-items: center;
-    margin-top: 5px; /* Расстояние от основного текста */
+    margin-top: 5px; /* Отступ сверху под текстом кнопки */
 }
 
 .counter-icon {
-    width: 16px; /* Размер иконки */
-    height: 16px;
-    margin-right: 4px; /* Расстояние между иконкой и текстом */
+    width: 20px; /* Размер иконки */
+    height: 20px;
+    margin-bottom: 4px; /* Отступ между иконкой и числом */
 }
 
 .counter-value {
-    font-size: 12px; /* Размер текста */
-    color: #fff; /* Цвет текста */
-    font-weight: bold; /* Жирность текста */
+    font-size: 12px; /* Размер текста числа */
+    color: #fff;
+    font-weight: bold;
 }
+
 
 
 /* Контейнер для фона */
