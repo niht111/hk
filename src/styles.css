@@ -37,7 +37,8 @@ body {
     margin-top: 6px;}
 .inf-icon{
     width: 20px;
-    height: 20px;}
+    height: 20px;
+    margin-top: -1px}
 .counter-box {
     width: 80px;
     height: 25px; 
@@ -113,67 +114,58 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-/* Отображает очки - количество кликов, фото*/
+    align-items: center;}
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 45%;
-}
-/* Отображает монетку - изображение возле очков*/
+    margin-top: 100px;}
 .header img {
-    width: 50px;
-    height: 50px;
-    margin-right: 14px;
-    pointer-events: none;
-}
-/* Само количество очков - кликов*/
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+    margin-top: -10px;
+    pointer-events: none;}
 .score {
     color: #fff;
     text-align: center;
-    font-size: 36px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
-    user-select: none;
-}
+    user-select: none;}
+
 /* Контейнер шкалы*/
 .progress-bar {
     width: 80%;
     height: 10px;
     background: #2a2d33;
     border-radius: 10px;
-    margin: 10px 0;
     overflow: hidden;
     position: relative;
-}
-/* Заполняемая часть шкалы*/
+    top: 0px;}
 #progress-bar-fill {
     height: 100%;
     background: linear-gradient(90deg, #e8c547, #ef882b);
     width: 0%;  
     transition: width 0.3s ease;  
-    border-radius: 10px;
-}
+    border-radius: 10px;}
+
+
 /* Основной кликер - контейнер*/
 .circle {
     position: relative;
     margin: 20px 0;
-    top: -50px;
-}
-/* Фото кликера*/
+    top: 10px;}
 .circle img {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
     transition: transform 0.2s ease;
     --tiltX: 0deg;
     --tiltY: 0deg;
     transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
-    pointer-events: auto;
-}
-/* +1 анимация*/
+    pointer-events: auto;}
 .plus-one {
     position: absolute;
     font-family: Inter;
@@ -186,9 +178,7 @@ body {
     -webkit-text-fill-color: transparent;
     pointer-events: none;
     user-select: none;
-    animation: move-up 2s forwards;
-}
-/* Его анимация*/
+    animation: move-up 2s forwards;}
 @keyframes move-up {
     0% {
         opacity: 1;
@@ -196,57 +186,43 @@ body {
     }
     100% {
         opacity: 0;
-        transform: translateY(-50px);
-    }
-}
+        transform: translateY(-50px);}}
 
 .charge-container {
-    border: 2px solid #000;
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin-top: -50px;
-    align-items: center;
-}
-
+    width: 90%;
+    margin-top: 0px;
+    align-items: center;}
 .charge {
     display: flex;
     align-items: center;
-    color: #fff;
-}
-
+    color: #fff;}
 .charge .energy-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    pointer-events: none;
-}
-
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    pointer-events: none;}
 #energy-level {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-}
-
+    font-family: 'Roboto', sans-serif;}
 .boost {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
+    justify-content: center;}
 .boost-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    pointer-events: none;
-}
-
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    pointer-events: none;}
 #boost-btn {
     background-color: #2C2F35;
     color: #fff;
     border: none;
-    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
     font-weight: 600;
-    padding: 10px 20px;
     border-radius: 5px;
     /* cursor: pointer; */
     /* transition: background-color 0.3s; */
@@ -265,6 +241,7 @@ body {
     padding: 10px 0px; /* Отступы сверху и снизу 10px, слева и справа 20px */
     border-radius: 12px 12px 0px 0px;
     width: 100%; /* Автоматическая ширина */
+    height: 30px;
     max-width: 960px; /* Максимальная ширина панели */
     margin: 0 auto; /* Центрирует панель на экране */
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
@@ -278,14 +255,15 @@ body {
     background: none;
     border: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 9px;
     cursor: pointer;
+    margin-bottom: -10px;
 }
 
 .bottom-nav button img {
     width: 20px;
     height: 20px;
-    margin-bottom: 4px;
+    margin-bottom: -4px;
     pointer-events: none;
 }
 /* 
