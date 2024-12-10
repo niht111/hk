@@ -8,117 +8,106 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    -webkit-user-select: none; /* Chrome, Safari, Opera */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Standard */
-}
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+
+
+/* инф ячейки */
 .counter-container {
+    border: 2px solid #000;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    top: 16%; /* Опускаем кнопки вниз */
-    width: 100%;
+    top: 16%; 
+    width: 90%;
     z-index: 1;
-    margin-top: 5%; /* Дополнительный отступ сверху */
-}
+    margin-top: 5%;}
 .counter-text1 {
     color: #F79841; 
-}
-
+    margin-top: -4px;}
 .counter-text2 {
     color: #6F72E2; 
-}
-
+    margin-top: -4px;}
 .counter-text3 {
     color: #84CB69; 
-}
-
+    margin-top: -4px;}
 .counter-value1 {
-    margin-top: 6px;
-}
+    margin-top: 6px;}
+.inf-icon{
+    width: 20px;
+    height: 20px;}
 .counter-box {
-    width: 100px; /* Ширина квадрата */
-    height: 50px; /* Высота адаптивная */
-    background-color: #3e4a59; /* Цвет фона */
+    width: 80px;
+    height: 25px; 
+    background-color: #32363C; 
     display: flex;
-    flex-direction: column; /* Элементы располагаются вертикально */
-    justify-content: flex-start;
+    flex-direction: column; 
+    justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     padding: 10px;
     color: #fff;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    gap: 8px; /* Расстояние между элементами */
-}
-
-.counter-value1 {
-    margin-top: 6px;
-}
-
+    margin-bottom: 10px;
+    gap: 0px; }
 .counter-text {
-    font-size: 10px; /* Размер текста кнопки */
-    margin-bottom: 5px; /* Поднимаем текст кнопки чуть выше */
-}
-
+    font-size: 15px; 
+    margin-bottom: 5px;}
 .counter-info {
     display: flex;
-    flex-direction: row; /* Элементы вертикально */
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
-    margin-top: 5px; /* Отступ сверху под текстом кнопки */
-}
-
+    margin-top: 0px; }
 .counter-icon {
-    width: 20px; /* Размер иконки */
+    width: 20px; 
     height: 20px;
     pointer-events: none;
-    margin-bottom: 4px; /* Отступ между иконкой и числом */
-}
-
+    margin-bottom: 5px; }
 .counter-value {
-    font-size: 12px; /* Размер текста числа */
-    color: #fff;
-    font-weight: bold;
-}
-
+    font-size: 10px; /* Размер текста числа */
+    color: #fff;}
+/* v */
 
 
 /* Контейнер для фона */
 .background-container {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 0; 
     left: 0;
-    width: 100%;
+    width: 100.5%;
     height: 100%;
-    z-index: -2; 
-}
-
+    z-index: -2; }
 .square2 {
     position: absolute;
-    width: 100%;
-    height: 25%; 
+    width: 101%;
+    height: 27%; 
     top: 0;
-    left: 0;
+    left: -0.4%;
     background: linear-gradient(180deg, #212429 38.34%, #F9D838 100%);
-    z-index: -2;
-}
-
+    z-index: -2;}
 .square {
     position: absolute;
     width: 100%;
     height: 100%;  
     top: 15%;
-    left: 0;
+    left: -0.6%;
+    margin: 0;
     border: 2px solid #F9D838;
     background: #2C2F35;
     border-radius: 50px 50px 0 0; 
+    margin: 0;
     z-index: -1; 
-    margin: -2px;
+    padding: 10px 0px;
 }
+/* v */
+
+
 /* Контейнер основной игры - кликера*/
 .game {
     flex: 1;
@@ -171,11 +160,12 @@ body {
 .circle {
     position: relative;
     margin: 20px 0;
+    top: -50px;
 }
 /* Фото кликера*/
 .circle img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
     transition: transform 0.2s ease;
@@ -212,10 +202,11 @@ body {
 }
 
 .charge-container {
+    border: 2px solid #000;
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin-top: 20px;
+    margin-top: -50px;
     align-items: center;
 }
 
@@ -264,15 +255,16 @@ body {
 
 /* Нижняя панель управления */
 .bottom-nav {
+    border: 2px solid #000;
     display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
     justify-content: space-around;
     align-items: center;
-    background-color: #32363CB2;
+    background-color: #32363c;
     padding: 10px 0px; /* Отступы сверху и снизу 10px, слева и справа 20px */
-    border-radius: 12px;
+    border-radius: 12px 12px 0px 0px;
     width: 100%; /* Автоматическая ширина */
     max-width: 960px; /* Максимальная ширина панели */
     margin: 0 auto; /* Центрирует панель на экране */
@@ -297,11 +289,6 @@ body {
     margin-bottom: 4px;
     pointer-events: none;
 }
-
-.bottom-nav button:hover {
-    color: #e8c547;
-}
-
 /* 
 .bottom-nav active {
     color: #21242980;
