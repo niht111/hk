@@ -74,6 +74,29 @@ function getScore() {
     return Number(localStorage.getItem('score')) || 0;
 }
 
+// Функция для отправки кликов на сервер
+function sendClicksToServer(clicks) {
+    fetch('http://localhost:3000/update-clicks', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ clicks }),  // Отправляем только клики
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Клики обновлены:', data);
+    })
+    .catch(error => {
+        console.error('Ошибка при отправке кликов:', error);
+    });
+}
+
+// Пример использования
+const score = getScore(); // Получаем количество кликов
+sendClicksToServer(score); // Отправляем клики на сервер
+
+
 function addOne() {
     setScore(getScore() + 1);
     setImage();
